@@ -1,0 +1,192 @@
+@font-face {
+    font-family: yekan-bakh;
+    src: url(./font/YekanBakh-Regular.eot);
+    src: url(./font/YekanBakh-Regular.ttf);
+    src: url(./font/YekanBakh-Regular.woff);
+    src: url(./font/YekanBakh-Regular.woff2);
+}
+@font-face {
+    font-family: vazir;
+    src: url(./font/Vazirmatn-Regular.eot);
+    src: url(./font/Vazirmatn-Regular.ttf);
+    src: url(./font/Vazirmatn-Regular.woff);
+    src: url(./font/Vazirmatn-Regular.woff2);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: yekan-bakh;
+}
+.container{
+    width: 100%;
+    padding: 70px;
+    background-color: #ffff;
+}
+.title{
+    width: 100%;
+    text-align: center;
+    word-spacing: 5px;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 44px;
+}
+.title1{
+    color: #282828;
+}
+.title2{
+    color: #8A6EF8;
+}
+/* ///////////////start card part styles/////////////// */
+.cards{
+    margin-top: 45px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    grid-template-rows: repeat(2, minmax(232px , auto));
+    gap: 15px;
+}
+.card{
+    background-color: #FFFFFF;
+    box-shadow: 0 0 22px 10px #E4A4FF29;
+    border-radius: 1rem;
+    padding: 0 15px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    transition: 300ms;
+}
+.card img{
+    width: 50px;
+    height: 51px;
+}
+.card h2{
+    font-size: 14px;
+    font-weight: 700;
+}
+.card p{
+    font-size: 13px;
+    font-weight: 400;
+}
+.card:hover{
+    background-color:#c53fff2b ;
+    transform: scale(1.04);
+}
+/* ///////////////end card part styles/////////////// */
+/* ///////////////start curses part styles/////////////// */
+div.courses{
+    width: 100%;
+    background-color: #8A6EF8;
+    margin-top: 70px;
+    padding: 30px 45px;
+    border-radius: 25px;
+    font-family: vazir;
+}
+div.heading{
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.heading span{
+    font-size: 28px;
+    margin-right: 15px;
+    color: #FFFFFF;
+    font-weight: 600;
+}
+div.course{
+    width: 100%;
+    margin-top: 30px;
+    background-color: #FFFFFF;
+    min-height: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 25px;
+    font-size: 22px;
+    font-weight: 600;
+    cursor: pointer;
+}
+details[open] summary{
+    color: #8A6EF8;
+}
+ summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+details[open] summary img{
+    transform: rotate(180deg);
+}
+ul{
+    list-style-position: inside;
+    padding-right: 15px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #282828CC;
+}
+summary img{
+    width: 20px;
+    height: 20px;
+}
+/* ///////////////end curses part styles/////////////// */
+/* ********responsive design codes ************** */
+@media screen and (max-width: 910px) {
+    .container{
+        padding: 50px;
+    }
+    .cards{
+        grid-template-columns: repeat(2 , 1fr);
+        grid-template-rows: repeat(4, minmax(232px , auto)); 
+    }
+}
+@media (max-width: 550px){
+    .container{
+        padding: 30px 0;
+    }
+    .cards{
+        grid-template-rows: repeat(4, minmax(175px , auto)); 
+        margin-top: 30px;
+        padding: 0 30px;
+    }
+    .title{
+        font-size: 20px;
+    }
+    .card img{
+        width: 38px;
+        height: 39px;
+    }
+    .card h2{
+        font-size: 13px 
+    }
+    .card p{
+        font-size: 10px 
+    }
+    div.courses{
+        border-radius: 0;
+        margin-top: 30px;
+        padding: 20px;
+    }
+    .heading span{
+        font-size: 24px;
+        margin-right: 10px;
+    }
+    .heading img{
+        width: 24px;
+        height: 24px;
+    }
+    div.course{
+        margin-top: 20px;
+        font-size: 18px;
+    }
+    summary img{
+        width: 16px;
+        height: 16px;
+    }
+    ul{
+        font-size: 14px;
+    }
+}
